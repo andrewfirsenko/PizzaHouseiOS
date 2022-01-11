@@ -5,8 +5,8 @@
 //  Created by Andrew Firsenko on 11.01.2022.
 //
 
-import Foundation
 import UIKit
+import SnapKit
 
 final class OnboardingViewController: BaseViewController {
     
@@ -21,12 +21,20 @@ final class OnboardingViewController: BaseViewController {
         super.init()
         
         addViews()
-        configureLayout()
+        configureViews()
         configureAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        configureLayout()
     }
     
     // MARK: - Private
@@ -38,15 +46,20 @@ final class OnboardingViewController: BaseViewController {
         view.addSubview(controlView)
     }
     
+    private func configureViews() {
+        pageViewController.dataSource = self
+        pageViewController.delegate = self
+    }
+    
     private func configureLayout() {
-        
+        controlView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(view.safeAreaInsets.bottom)
+        }
     }
     
     private func configureAppearance() {
-        pageViewController.dataSource = self
-        pageViewController.delegate = self
-        
-        view.backgroundColor = .red
+        view.backgroundColor = Asset.mainBackground.color
     }
 }
 
