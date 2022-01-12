@@ -18,6 +18,7 @@
 		4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973219B270A204500E5E381 /* Fonts+Generated.swift */; };
 		497321A5270A20F900E5E381 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497321A7270A20F900E5E381 /* Localizable.strings */; };
 		497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497321A9270A212B00E5E381 /* Strings+Generated.swift */; };
+		81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81491B63278F30B9008993F9 /* CircleProgressButton.swift */; };
 		81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */; };
 		81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */; };
 		81E514F5278CED7200A2D6F3 /* OnboardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */; };
@@ -38,6 +39,7 @@
 		497321A9270A212B00E5E381 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		5041A8B3955B00B556C1434D /* Pods-PizzaHouseiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.release.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.release.xcconfig"; sourceTree = "<group>"; };
 		7436DCFC7EA171876AFA8CD9 /* Pods-PizzaHouseiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.debug.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		81491B63278F30B9008993F9 /* CircleProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressButton.swift; sourceTree = "<group>"; };
 		81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControlView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */,
+				81491B63278F30B9008993F9 /* CircleProgressButton.swift */,
 			);
 			path = OnboardingControlView;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				4973219D270A204500E5E381 /* IB-Scenes+Generated.swift in Sources */,
 				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
+				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
 				4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */,
 				4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */,
 				4973219E270A204500E5E381 /* IB-Segues+Generated.swift in Sources */,

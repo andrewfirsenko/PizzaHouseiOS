@@ -49,6 +49,7 @@ final class OnboardingViewController: BaseViewController {
     private func configureViews() {
         pageViewController.dataSource = self
         pageViewController.delegate = self
+        controlView.configure(with: 3)
     }
     
     private func configureLayout() {

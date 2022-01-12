@@ -14,34 +14,42 @@ protocol IOnboardingControlView: UIView {
     func configure(with count: Int)
     
     /// Устанавливает текущий шаг
-    func selectStep(with step: Int)
+    func selectStep(with step: Int, animated: Bool)
     
     /// Сообщает об текущем выбраном шаге
     var onSelectedStep: ((Int) -> Void)? { get set }
 }
 
-private extension CGFloat {
-    static let iconSize: CGFloat = 18
-    static let buttonSize: CGFloat = 60
+private enum Constants {
     static let horizontalMargin: CGFloat = 30
+    static let buttonSize: CGFloat = 60
+    static let buttonRect = CGRect(origin: .zero,
+                                   size: CGSize(width: Constants.buttonSize, height: Constants.buttonSize))
 }
 
 final class OnboardingControlView: UIView, IOnboardingControlView {
     
     // UI
-    private var prevButton: UIButton = {
-        let button = UIButton()
+    private lazy var prevButton: UIButton = {
+        let button = UIButton(frame: Constants.buttonRect)
         button.setImage(Asset.arrawLeft.image, for: .normal)
         button.tintColor = Asset.mainBlack.color
-        button.isHidden = true
+        button.isHidden = false
+        button.addTarget(self, action: #selector(tapPrevButton), for: .touchUpInside)
         return button
     }()
-    private let nextButton: UIButton = {
-        let button = UIButton()
+    private lazy var nextButton: CircleProgressButton = {
+        let button = CircleProgressButton(frame: Constants.buttonRect)
         button.setImage(Asset.arrawRight.image, for: .normal)
-        button.tintColor = .red
+        button.tintColor = .white
+        button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         return button
     }()
+    
+    // Private property
+    private var countSteps: Int = 1
+    private var currentStep: Int = 1
     
     // MARK: - Init
     
@@ -66,14 +74,14 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
     
     private func configureLayout() {
         prevButton.snp.makeConstraints {
-            $0.width.height.equalTo(CGFloat.buttonSize)
+            $0.width.height.equalTo(Constants.buttonSize)
             $0.top.bottom.greaterThanOrEqualToSuperview()
-            $0.left.equalToSuperview().offset(CGFloat.horizontalMargin)
+            $0.leading.equalToSuperview().offset(Constants.horizontalMargin)
         }
         nextButton.snp.makeConstraints {
-            $0.width.height.equalTo(CGFloat.buttonSize)
+            $0.width.height.equalTo(Constants.buttonSize)
             $0.top.bottom.greaterThanOrEqualToSuperview()
-            $0.right.equalToSuperview().inset(CGFloat.horizontalMargin)
+            $0.trailing.equalToSuperview().inset(Constants.horizontalMargin)
         }
     }
     
@@ -81,15 +89,39 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
         backgroundColor = .clear
     }
     
+    private func updateUI(animated: Bool) {
+        prevButton.isHidden = currentStep <= 1
+        nextButton.setProgress(with: CGFloat(currentStep) / CGFloat(countSteps), animated: animated)
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func tapPrevButton() {
+        let step = max(1, currentStep - 1)
+        selectStep(with: step, animated: true)
+        onSelectedStep?(step)
+    }
+    
+    @objc private func tapNextButton() {
+        let step = min(countSteps, currentStep + 1)
+        selectStep(with: step, animated: true)
+        onSelectedStep?(step)
+    }
+    
     // MARK: - IOnboardingControlView
     
     var onSelectedStep: ((Int) -> Void)?
     
-    func selectStep(with step: Int) {
-        // TODO
+    func selectStep(with step: Int, animated: Bool) {
+        guard step > 0 && step <= countSteps else {
+            return
+        }
+        currentStep = step
+        updateUI(animated: animated)
     }
     
     func configure(with count: Int) {
-        // TODO
+        countSteps = count > 0 ? count : 1
+        selectStep(with: 1, animated: false)
     }
 }
