@@ -75,12 +75,12 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
     private func configureLayout() {
         prevButton.snp.makeConstraints {
             $0.width.height.equalTo(Constants.buttonSize)
-            $0.top.bottom.greaterThanOrEqualToSuperview()
+            $0.top.bottom.equalToSuperview()
             $0.leading.equalToSuperview().offset(Constants.horizontalMargin)
         }
         nextButton.snp.makeConstraints {
             $0.width.height.equalTo(Constants.buttonSize)
-            $0.top.bottom.greaterThanOrEqualToSuperview()
+            $0.top.bottom.equalToSuperview()
             $0.trailing.equalToSuperview().inset(Constants.horizontalMargin)
         }
     }

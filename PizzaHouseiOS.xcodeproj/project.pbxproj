@@ -22,6 +22,9 @@
 		81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */; };
 		81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */; };
 		81E514F5278CED7200A2D6F3 /* OnboardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */; };
+		81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861542790B46D00655041 /* OnboardingPageViewController.swift */; };
+		81E861572790B4F800655041 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861562790B4F800655041 /* Configurable.swift */; };
+		81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861582790B8EC00655041 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControlView.swift; sourceTree = "<group>"; };
+		81E861542790B46D00655041 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		81E861562790B4F800655041 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		81E861582790B8EC00655041 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PizzaHouseiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +156,7 @@
 				81E514F3278CEBAB00A2D6F3 /* OnboardingPage */,
 				81E514F2278CEB8900A2D6F3 /* OnboardingControlView */,
 				81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */,
+				81E861582790B8EC00655041 /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */,
+				81E861562790B4F800655041 /* Configurable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 		81E514F3278CEBAB00A2D6F3 /* OnboardingPage */ = {
 			isa = PBXGroup;
 			children = (
+				81E861542790B46D00655041 /* OnboardingPageViewController.swift */,
 			);
 			path = OnboardingPage;
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
 				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
+				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
+				81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */,
 				4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */,
 				4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */,
 				4973219E270A204500E5E381 /* IB-Segues+Generated.swift in Sources */,
+				81E861572790B4F800655041 /* Configurable.swift in Sources */,
 				497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */,
 				81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */,
 				4973219C270A204500E5E381 /* XCAssets+Generated.swift in Sources */,

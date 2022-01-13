@@ -12,6 +12,27 @@ import Foundation
 internal enum L10n {
   /// Pizza House
   internal static let pizzaHouse = L10n.tr("Localizable", "PizzaHouse")
+
+  internal enum Onboarding {
+    internal enum Delivery {
+      /// Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн
+      internal static let secondText = L10n.tr("Localizable", "Onboarding.Delivery.SecondText")
+      /// Бесплатная доставка
+      internal static let title = L10n.tr("Localizable", "Onboarding.Delivery.Title")
+    }
+    internal enum OnlineOrder {
+      /// Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн
+      internal static let secondText = L10n.tr("Localizable", "Onboarding.OnlineOrder.SecondText")
+      /// Онлайн заказ
+      internal static let title = L10n.tr("Localizable", "Onboarding.OnlineOrder.Title")
+    }
+    internal enum TystyPizza {
+      /// Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн
+      internal static let secondText = L10n.tr("Localizable", "Onboarding.TystyPizza.SecondText")
+      /// Вкусная пицца
+      internal static let title = L10n.tr("Localizable", "Onboarding.TystyPizza.Title")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
