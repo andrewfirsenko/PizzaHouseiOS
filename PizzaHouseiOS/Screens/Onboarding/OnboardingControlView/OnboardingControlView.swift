@@ -18,6 +18,9 @@ protocol IOnboardingControlView: UIView {
     
     /// Сообщает об текущем выбраном шаге
     var onSelectedStep: ((Int) -> Void)? { get set }
+    
+    /// Сообщает о завершении прохождения всех шагов
+    var onCompleted: (() -> Void)? { get set }
 }
 
 private enum Constants {
@@ -75,12 +78,14 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
     private func configureLayout() {
         prevButton.snp.makeConstraints {
             $0.width.height.equalTo(Constants.buttonSize)
-            $0.top.bottom.equalToSuperview()
+            $0.top.lessThanOrEqualToSuperview()
+            $0.bottom.equalToSuperview()
             $0.leading.equalToSuperview().offset(Constants.horizontalMargin)
         }
         nextButton.snp.makeConstraints {
             $0.width.height.equalTo(Constants.buttonSize)
-            $0.top.bottom.equalToSuperview()
+            $0.top.lessThanOrEqualToSuperview()
+            $0.bottom.equalToSuperview()
             $0.trailing.equalToSuperview().inset(Constants.horizontalMargin)
         }
     }
@@ -103,6 +108,10 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
     }
     
     @objc private func tapNextButton() {
+        if countSteps == currentStep {
+            onCompleted?()
+            return
+        }
         let step = min(countSteps, currentStep + 1)
         selectStep(with: step, animated: true)
         onSelectedStep?(step)
@@ -111,6 +120,7 @@ final class OnboardingControlView: UIView, IOnboardingControlView {
     // MARK: - IOnboardingControlView
     
     var onSelectedStep: ((Int) -> Void)?
+    var onCompleted: (() -> Void)?
     
     func selectStep(with step: Int, animated: Bool) {
         guard step > 0 && step <= countSteps else {

@@ -11,14 +11,16 @@ import SnapKit
 final class OnboardingViewController: BaseViewController {
     
     // Dependensis
-    private let controlView: IOnboardingControlView
     private let viewModel: IOnboardingViewModel
     
     // UI
-    private let pageViewController = UIPageViewController()
+    private let pageViewController = UIPageViewController(transitionStyle: .scroll,
+                                                          navigationOrientation: .horizontal)
+    private let controlView: IOnboardingControlView
     
     // Private property
     private var pages: [OnboardingPageViewController] = []
+    private var currentIndex: Int?
     
     // MARK: - Init
     
@@ -31,7 +33,7 @@ final class OnboardingViewController: BaseViewController {
         super.init()
         
         addViews()
-        configureViews()
+        configureActions()
         configureAppearance()
     }
     
@@ -44,14 +46,8 @@ final class OnboardingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageViewController.view.backgroundColor = .red
-        pageViewController.setViewControllers(pages, direction: .forward, animated: true) { completed in
-            if !completed { return }
-            DispatchQueue.main.async { [weak self] in
-                self?.pageViewController.dataSource = nil
-                self?.pageViewController.dataSource = self
-            }
-        }
+        configurePageViewController()
+        controlView.configure(with: pages.count)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,22 +65,11 @@ final class OnboardingViewController: BaseViewController {
         view.addSubview(controlView)
     }
     
-    private func configureViews() {
-        pageViewController.dataSource = self
-        
-        pages = viewModel.data.map {
-            let page = OnboardingPageViewController()
-            page.configure(with: $0)
-            return page
-        }
-        controlView.configure(with: pages.count)
-    }
-    
     private func configureLayout() {
         pageViewController.view.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalToSuperview()
-            $0.bottom.equalTo(controlView.snp.top)
+            $0.top.equalToSuperview().offset(view.safeAreaInsets.top)
+            $0.bottom.greaterThanOrEqualTo(controlView.snp.top)
         }
         controlView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
@@ -95,39 +80,41 @@ final class OnboardingViewController: BaseViewController {
     private func configureAppearance() {
         view.backgroundColor = Asset.mainBackground.color
     }
-}
-
-// MARK: - UIPageViewControllerDataSource
-
-extension OnboardingViewController: UIPageViewControllerDataSource {
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-         pages.count
+    private func configurePageViewController() {
+        pages = viewModel.data.map {
+            let page = OnboardingPageViewController()
+            page.configure(with: $0)
+            return page
+        }
+        if let firstPage = pages.first {
+            currentIndex = 0
+            pageViewController.setViewControllers([firstPage], direction: .forward, animated: false, completion: nil)
+        }
     }
     
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        0
-    }
+    // MARK: - Actions
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = (viewController as? OnboardingPageViewController)?.index else {
-            return nil
+    private func configureActions() {
+        controlView.onCompleted = {
+            // TODO
         }
-        let prevIndex = index - 1
-        guard prevIndex > 0 else {
-            return nil
+        controlView.onSelectedStep = { [weak self] newStep in
+            let index = newStep - 1
+            guard
+                let self = self,
+                index >= 0 && index < self.pages.count,
+                let currentIndex = self.currentIndex
+            else {
+                return
+            }
+            self.pageViewController.setViewControllers(
+                [self.pages[index]],
+                direction: currentIndex < index ? .forward : .reverse,
+                animated: true,
+                completion: nil
+            )
+            self.currentIndex = index
         }
-        return pages[prevIndex]
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = (viewController as? OnboardingPageViewController)?.index else {
-            return nil
-        }
-        let nextIndex = index + 1
-        guard nextIndex < pages.count else {
-            return nil
-        }
-        return pages[nextIndex]
     }
 }
