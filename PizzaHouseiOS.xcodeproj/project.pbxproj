@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C5C2F5F7A1A90FDED7FAC5B /* Pods_PizzaHouseiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E2CB92C2E33D54A0D51075 /* Pods_PizzaHouseiOS.framework */; };
+		3EE6DD768DE502D3C20E365B /* libPods-PizzaHouseiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */; };
 		49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49732178270A1E9D00E5E381 /* AppDelegate.swift */; };
 		4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973217A270A1E9D00E5E381 /* SceneDelegate.swift */; };
-		4973217D270A1E9D00E5E381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973217C270A1E9D00E5E381 /* ViewController.swift */; };
-		49732180270A1E9D00E5E381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4973217E270A1E9D00E5E381 /* Main.storyboard */; };
 		49732182270A1E9E00E5E381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49732181270A1E9E00E5E381 /* Assets.xcassets */; };
 		49732185270A1E9E00E5E381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49732183270A1E9E00E5E381 /* LaunchScreen.storyboard */; };
 		4973219C270A204500E5E381 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49732198270A204500E5E381 /* XCAssets+Generated.swift */; };
@@ -20,14 +18,21 @@
 		4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973219B270A204500E5E381 /* Fonts+Generated.swift */; };
 		497321A5270A20F900E5E381 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497321A7270A20F900E5E381 /* Localizable.strings */; };
 		497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497321A9270A212B00E5E381 /* Strings+Generated.swift */; };
+		81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81491B63278F30B9008993F9 /* CircleProgressButton.swift */; };
+		81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */; };
+		81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */; };
+		81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */; };
+		81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */; };
+		81E514F5278CED7200A2D6F3 /* OnboardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */; };
+		81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861542790B46D00655041 /* OnboardingPageViewController.swift */; };
+		81E861572790B4F800655041 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861562790B4F800655041 /* Configurable.swift */; };
+		81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861582790B8EC00655041 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49732175270A1E9D00E5E381 /* PizzaHouseiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaHouseiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49732178270A1E9D00E5E381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4973217A270A1E9D00E5E381 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4973217C270A1E9D00E5E381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4973217F270A1E9D00E5E381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49732181270A1E9E00E5E381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49732184270A1E9E00E5E381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49732186270A1E9E00E5E381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,8 +43,17 @@
 		497321A6270A20F900E5E381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		497321A9270A212B00E5E381 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		5041A8B3955B00B556C1434D /* Pods-PizzaHouseiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.release.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.release.xcconfig"; sourceTree = "<group>"; };
-		63E2CB92C2E33D54A0D51075 /* Pods_PizzaHouseiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaHouseiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436DCFC7EA171876AFA8CD9 /* Pods-PizzaHouseiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.debug.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		81491B63278F30B9008993F9 /* CircleProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressButton.swift; sourceTree = "<group>"; };
+		81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControlView.swift; sourceTree = "<group>"; };
+		81E861542790B46D00655041 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		81E861562790B4F800655041 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		81E861582790B8EC00655041 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PizzaHouseiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C5C2F5F7A1A90FDED7FAC5B /* Pods_PizzaHouseiOS.framework in Frameworks */,
+				3EE6DD768DE502D3C20E365B /* libPods-PizzaHouseiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +71,7 @@
 		45AE1E04DFF4AC61AB14D285 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63E2CB92C2E33D54A0D51075 /* Pods_PizzaHouseiOS.framework */,
+				9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,6 +101,7 @@
 				4973217A270A1E9D00E5E381 /* SceneDelegate.swift */,
 				49732195270A1FCC00E5E381 /* Screens */,
 				49732192270A1F7D00E5E381 /* Resources */,
+				81E514ED278CE56900A2D6F3 /* Core */,
 				49732186270A1E9E00E5E381 /* Info.plist */,
 			);
 			path = PizzaHouseiOS;
@@ -96,18 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				49732194270A1F9B00E5E381 /* Generated */,
-				49732193270A1F9600E5E381 /* Fonts */,
+				81920ED227863D44001BA6F2 /* Fonts */,
 				497321A1270A209700E5E381 /* Strings */,
 				49732181270A1E9E00E5E381 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		49732193270A1F9600E5E381 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		49732194270A1F9B00E5E381 /* Generated */ = {
@@ -125,9 +133,8 @@
 		49732195270A1FCC00E5E381 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				81E514EA278CE44A00A2D6F3 /* Onboarding */,
 				49732183270A1E9E00E5E381 /* LaunchScreen.storyboard */,
-				4973217E270A1E9D00E5E381 /* Main.storyboard */,
-				4973217C270A1E9D00E5E381 /* ViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -138,6 +145,52 @@
 				497321A7270A20F900E5E381 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		81920ED227863D44001BA6F2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */,
+				81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		81E514EA278CE44A00A2D6F3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				81E514F3278CEBAB00A2D6F3 /* OnboardingPage */,
+				81E514F2278CEB8900A2D6F3 /* OnboardingControlView */,
+				81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */,
+				81E861582790B8EC00655041 /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		81E514ED278CE56900A2D6F3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */,
+				81E861562790B4F800655041 /* Configurable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		81E514F2278CEB8900A2D6F3 /* OnboardingControlView */ = {
+			isa = PBXGroup;
+			children = (
+				81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */,
+				81491B63278F30B9008993F9 /* CircleProgressButton.swift */,
+			);
+			path = OnboardingControlView;
+			sourceTree = "<group>";
+		};
+		81E514F3278CEBAB00A2D6F3 /* OnboardingPage */ = {
+			isa = PBXGroup;
+			children = (
+				81E861542790B46D00655041 /* OnboardingPageViewController.swift */,
+			);
+			path = OnboardingPage;
 			sourceTree = "<group>";
 		};
 		F47291F286091E1B766CD276 /* Pods */ = {
@@ -211,7 +264,8 @@
 				49732185270A1E9E00E5E381 /* LaunchScreen.storyboard in Resources */,
 				497321A5270A20F900E5E381 /* Localizable.strings in Resources */,
 				49732182270A1E9E00E5E381 /* Assets.xcassets in Resources */,
-				49732180270A1E9D00E5E381 /* Main.storyboard in Resources */,
+				81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */,
+				81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,28 +319,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4973217D270A1E9D00E5E381 /* ViewController.swift in Sources */,
 				4973219D270A204500E5E381 /* IB-Scenes+Generated.swift in Sources */,
+				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
+				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
+				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
+				81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */,
 				4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */,
 				4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */,
 				4973219E270A204500E5E381 /* IB-Segues+Generated.swift in Sources */,
+				81E861572790B4F800655041 /* Configurable.swift in Sources */,
 				497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */,
+				81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */,
 				4973219C270A204500E5E381 /* XCAssets+Generated.swift in Sources */,
+				81E514F5278CED7200A2D6F3 /* OnboardingControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4973217E270A1E9D00E5E381 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4973217F270A1E9D00E5E381 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49732183270A1E9E00E5E381 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -429,6 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 598487U66T;
 				INFOPLIST_FILE = PizzaHouseiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 598487U66T;
 				INFOPLIST_FILE = PizzaHouseiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
