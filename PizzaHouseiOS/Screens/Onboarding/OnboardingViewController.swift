@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+private extension CGFloat {
+    static let minBottomMargin: CGFloat = 24
+}
+
 final class OnboardingViewController: BaseViewController {
     
     // Dependensis
@@ -73,7 +77,7 @@ final class OnboardingViewController: BaseViewController {
         }
         controlView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(view.safeAreaInsets.bottom)
+            $0.bottom.equalToSuperview().inset(max(view.safeAreaInsets.bottom, CGFloat.minBottomMargin))
         }
     }
     

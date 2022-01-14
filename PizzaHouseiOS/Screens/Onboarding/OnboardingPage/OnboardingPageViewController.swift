@@ -12,6 +12,7 @@ private extension CGFloat {
     static let horizontalMargin: CGFloat = 24
     static let bottomMargin: CGFloat = 40
     static let betweenTextMargin: CGFloat = 32
+    static let minMargin: CGFloat = 12
     
     static let titleFontSize: CGFloat = 24
     static let secondTextFondSize: CGFloat = 14
@@ -60,8 +61,16 @@ final class OnboardingPageViewController: BaseViewController {
         }
         secondTextLabel.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(CGFloat.horizontalMargin)
-            $0.top.equalTo(titleLabel.snp.bottom).offset(CGFloat.betweenTextMargin)
-            $0.bottom.equalToSuperview().inset(CGFloat.bottomMargin)
+            // Top
+            $0.top.greaterThanOrEqualTo(titleLabel.snp.bottom)
+                .offset(CGFloat.minMargin).priority(.high)
+            $0.top.lessThanOrEqualTo(titleLabel.snp.bottom)
+                .offset(CGFloat.betweenTextMargin).priority(.medium)
+            // Bottom
+            $0.bottom.lessThanOrEqualToSuperview()
+                .inset(CGFloat.minMargin).priority(.high)
+            $0.bottom.equalToSuperview()
+                .inset(CGFloat.bottomMargin).priority(.medium)
         }
     }
     
