@@ -12,7 +12,13 @@ private extension CGFloat {
     static let minBottomMargin: CGFloat = 24
 }
 
-final class OnboardingViewController: BaseViewController {
+protocol IOnboardingViewController: AnyObject {
+    
+    /// Сообщает о завершении прохождения всех шагов
+    var onCompleted: (() -> Void)? { set get }
+}
+
+final class OnboardingViewController: BaseViewController, IOnboardingViewController {
     
     // Dependensis
     private let viewModel: IOnboardingViewModel
@@ -25,6 +31,13 @@ final class OnboardingViewController: BaseViewController {
     // Private property
     private var pages: [OnboardingPageViewController] = []
     private var currentIndex: Int?
+    
+    // IOnboardingViewController
+    var onCompleted: (() -> Void)? {
+        didSet {
+            controlView.onCompleted = onCompleted
+        }
+    }
     
     // MARK: - Init
     
@@ -58,6 +71,10 @@ final class OnboardingViewController: BaseViewController {
         super.viewDidAppear(animated)
         
         configureLayout()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
     }
     
     // MARK: - Private
@@ -100,9 +117,6 @@ final class OnboardingViewController: BaseViewController {
     // MARK: - Actions
     
     private func configureActions() {
-        controlView.onCompleted = {
-            // TODO
-        }
         controlView.onSelectedStep = { [weak self] newStep in
             let index = newStep - 1
             guard

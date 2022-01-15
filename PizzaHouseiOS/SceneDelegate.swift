@@ -15,9 +15,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = OnboardingViewController(controlView: OnboardingControlView(),
-                                                              viewModel: OnboardingViewModel())
-        window?.makeKeyAndVisible()
+        
+        let mainTabBarController = MainTabBarController()
+        
+        if UserDefaults.standard.wasOnboarding == true {
+            setRootViewController(mainTabBarController, animated: false)
+            
+        } else {
+            let onboarding = OnboardingViewController(controlView: OnboardingControlView(),
+                                                      viewModel: OnboardingViewModel())
+            onboarding.onCompleted = { [weak self] in
+                self?.setRootViewController(mainTabBarController, animated: true)
+            }
+            setRootViewController(onboarding, animated: false)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +58,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    // MARK: - Public
+    
+    func setRootViewController(_ vc: UIViewController, animated: Bool) {
+        guard animated, let window = self.window else {
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
 
-
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: nil,
+                          completion: nil)
+    }
 }
 
