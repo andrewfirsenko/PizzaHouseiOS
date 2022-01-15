@@ -9,9 +9,28 @@
 PizzaHouse = "Pizza House";
 
 // MARK: - Onboarding
+
 Onboarding.OnlineOrder.Title = "Онлайн заказ";
 Onboarding.OnlineOrder.SecondText = "Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн";
 Onboarding.TystyPizza.Title = "Вкусная пицца";
 Onboarding.TystyPizza.SecondText = "Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн";
 Onboarding.Delivery.Title = "Бесплатная доставка";
 Onboarding.Delivery.SecondText = "Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн";
+
+// MARK: - Menu
+
+Menu.Menu = "Меню";
+
+// MARK: - Profile
+
+Profile.Profile = "Профиль";
+
+// MARK: - PromoCodes
+
+PromoCodes.PromoCodes = "Акции";
+
+// MARK: - Cart
+
+Cart.Cart = "Корзина";
+
+

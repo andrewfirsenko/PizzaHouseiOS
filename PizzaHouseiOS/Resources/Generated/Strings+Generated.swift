@@ -13,6 +13,16 @@ internal enum L10n {
   /// Pizza House
   internal static let pizzaHouse = L10n.tr("Localizable", "PizzaHouse")
 
+  internal enum Cart {
+    /// Корзина
+    internal static let cart = L10n.tr("Localizable", "Cart.Cart")
+  }
+
+  internal enum Menu {
+    /// Меню
+    internal static let menu = L10n.tr("Localizable", "Menu.Menu")
+  }
+
   internal enum Onboarding {
     internal enum Delivery {
       /// Совершайте заказ онлайн Совершайте заказ онлайн Совершайте заказ онлайн
@@ -32,6 +42,16 @@ internal enum L10n {
       /// Вкусная пицца
       internal static let title = L10n.tr("Localizable", "Onboarding.TystyPizza.Title")
     }
+  }
+
+  internal enum Profile {
+    /// Профиль
+    internal static let profile = L10n.tr("Localizable", "Profile.Profile")
+  }
+
+  internal enum PromoCodes {
+    /// Акции
+    internal static let promoCodes = L10n.tr("Localizable", "PromoCodes.PromoCodes")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

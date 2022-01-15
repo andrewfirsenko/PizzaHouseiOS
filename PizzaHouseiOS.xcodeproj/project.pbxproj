@@ -27,6 +27,13 @@
 		81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861542790B46D00655041 /* OnboardingPageViewController.swift */; };
 		81E861572790B4F800655041 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861562790B4F800655041 /* Configurable.swift */; };
 		81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E861582790B8EC00655041 /* OnboardingViewModel.swift */; };
+		81F5F9322792F07B005D01FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F9312792F07B005D01FC /* MainTabBarController.swift */; };
+		81F5F934279300D1005D01FC /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F933279300D1005D01FC /* TabBarItem.swift */; };
+		81F5F93A279302F1005D01FC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F939279302F1005D01FC /* MenuViewController.swift */; };
+		81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93B27930614005D01FC /* ProfileViewController.swift */; };
+		81F5F93E27930637005D01FC /* PromoCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93D27930637005D01FC /* PromoCodesViewController.swift */; };
+		81F5F94027930659005D01FC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93F27930659005D01FC /* CartViewController.swift */; };
+		81F5F94327930A6B005D01FC /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +60,13 @@
 		81E861542790B46D00655041 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		81E861562790B4F800655041 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		81E861582790B8EC00655041 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		81F5F9312792F07B005D01FC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		81F5F933279300D1005D01FC /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		81F5F939279302F1005D01FC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		81F5F93B27930614005D01FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		81F5F93D27930637005D01FC /* PromoCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodesViewController.swift; sourceTree = "<group>"; };
+		81F5F93F27930659005D01FC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PizzaHouseiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +114,7 @@
 				49732178270A1E9D00E5E381 /* AppDelegate.swift */,
 				4973217A270A1E9D00E5E381 /* SceneDelegate.swift */,
 				49732195270A1FCC00E5E381 /* Screens */,
+				81F5F94127930A1E005D01FC /* Helpers */,
 				49732192270A1F7D00E5E381 /* Resources */,
 				81E514ED278CE56900A2D6F3 /* Core */,
 				49732186270A1E9E00E5E381 /* Info.plist */,
@@ -134,7 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				81E514EA278CE44A00A2D6F3 /* Onboarding */,
+				81F5F9352793024A005D01FC /* Menu */,
+				81F5F93627930253005D01FC /* Profile */,
+				81F5F9372793028A005D01FC /* PromoCodes */,
+				81F5F938279302AD005D01FC /* Cart */,
 				49732183270A1E9E00E5E381 /* LaunchScreen.storyboard */,
+				81F5F9312792F07B005D01FC /* MainTabBarController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,6 +192,7 @@
 			children = (
 				81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */,
 				81E861562790B4F800655041 /* Configurable.swift */,
+				81F5F933279300D1005D01FC /* TabBarItem.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -191,6 +212,46 @@
 				81E861542790B46D00655041 /* OnboardingPageViewController.swift */,
 			);
 			path = OnboardingPage;
+			sourceTree = "<group>";
+		};
+		81F5F9352793024A005D01FC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				81F5F939279302F1005D01FC /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		81F5F93627930253005D01FC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				81F5F93B27930614005D01FC /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		81F5F9372793028A005D01FC /* PromoCodes */ = {
+			isa = PBXGroup;
+			children = (
+				81F5F93D27930637005D01FC /* PromoCodesViewController.swift */,
+			);
+			path = PromoCodes;
+			sourceTree = "<group>";
+		};
+		81F5F938279302AD005D01FC /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				81F5F93F27930659005D01FC /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		81F5F94127930A1E005D01FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F47291F286091E1B766CD276 /* Pods */ = {
@@ -321,13 +382,20 @@
 			files = (
 				4973219D270A204500E5E381 /* IB-Scenes+Generated.swift in Sources */,
 				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
+				81F5F93E27930637005D01FC /* PromoCodesViewController.swift in Sources */,
+				81F5F9322792F07B005D01FC /* MainTabBarController.swift in Sources */,
+				81F5F94327930A6B005D01FC /* UserDefaults+Extensions.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
 				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
 				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
+				81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */,
+				81F5F934279300D1005D01FC /* TabBarItem.swift in Sources */,
 				81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */,
 				4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */,
 				4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */,
+				81F5F94027930659005D01FC /* CartViewController.swift in Sources */,
 				4973219E270A204500E5E381 /* IB-Segues+Generated.swift in Sources */,
+				81F5F93A279302F1005D01FC /* MenuViewController.swift in Sources */,
 				81E861572790B4F800655041 /* Configurable.swift in Sources */,
 				497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */,
 				81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */,
