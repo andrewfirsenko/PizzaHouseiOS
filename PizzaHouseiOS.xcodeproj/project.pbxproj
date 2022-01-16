@@ -21,6 +21,7 @@
 		81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81491B63278F30B9008993F9 /* CircleProgressButton.swift */; };
 		81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */; };
 		81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */; };
+		81E036A027949E0000968E4F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0369F27949E0000968E4F /* CategoryModel.swift */; };
 		81E514EC278CE48E00A2D6F3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */; };
 		81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */; };
 		81E514F5278CED7200A2D6F3 /* OnboardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */; };
@@ -54,6 +55,7 @@
 		81491B63278F30B9008993F9 /* CircleProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressButton.swift; sourceTree = "<group>"; };
 		81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		81E0369F27949E0000968E4F /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		81E514EB278CE48E00A2D6F3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		81E514F0278CE81F00A2D6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		81E514F4278CED7200A2D6F3 /* OnboardingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControlView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				49732178270A1E9D00E5E381 /* AppDelegate.swift */,
 				4973217A270A1E9D00E5E381 /* SceneDelegate.swift */,
+				81E0369E27949DED00968E4F /* Model */,
 				49732195270A1FCC00E5E381 /* Screens */,
 				81F5F94127930A1E005D01FC /* Helpers */,
 				49732192270A1F7D00E5E381 /* Resources */,
@@ -174,6 +177,14 @@
 				81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		81E0369E27949DED00968E4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81E0369F27949E0000968E4F /* CategoryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		81E514EA278CE44A00A2D6F3 /* Onboarding */ = {
@@ -387,6 +398,7 @@
 				81F5F94327930A6B005D01FC /* UserDefaults+Extensions.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
 				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
+				81E036A027949E0000968E4F /* CategoryModel.swift in Sources */,
 				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
 				81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */,
 				81F5F934279300D1005D01FC /* TabBarItem.swift in Sources */,

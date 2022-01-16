@@ -9,6 +9,9 @@ target 'PizzaHouseiOS' do
   # Pods for PizzaHouseiOS
   pod 'SwiftGen'
   pod 'SnapKit', '5.0.1'
+  
+  # UI
+  pod 'Parchment', '3.1.0'
 
 end
 
