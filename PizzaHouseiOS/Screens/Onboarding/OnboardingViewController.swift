@@ -87,6 +87,9 @@ final class OnboardingViewController: BaseViewController, IOnboardingViewControl
     }
     
     private func configureLayout() {
+        pageViewController.view.snp.removeConstraints()
+        controlView.snp.removeConstraints()
+        
         pageViewController.view.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalToSuperview().offset(view.safeAreaInsets.top)

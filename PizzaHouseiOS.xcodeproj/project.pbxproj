@@ -18,6 +18,10 @@
 		4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973219B270A204500E5E381 /* Fonts+Generated.swift */; };
 		497321A5270A20F900E5E381 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497321A7270A20F900E5E381 /* Localizable.strings */; };
 		497321AA270A212B00E5E381 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497321A9270A212B00E5E381 /* Strings+Generated.swift */; };
+		8105F1FB279C165F001621DF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F1FA279C165F001621DF /* MenuViewModel.swift */; };
+		8105F1FD279C344B001621DF /* ImagePagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F1FC279C344B001621DF /* ImagePagingCell.swift */; };
+		8105F203279C449A001621DF /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F202279C449A001621DF /* PageMenuViewController.swift */; };
+		8105F205279C666E001621DF /* UIColor+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F204279C666E001621DF /* UIColor+Percentage.swift */; };
 		81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81491B63278F30B9008993F9 /* CircleProgressButton.swift */; };
 		81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */; };
 		81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */; };
@@ -34,7 +38,7 @@
 		81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93B27930614005D01FC /* ProfileViewController.swift */; };
 		81F5F93E27930637005D01FC /* PromoCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93D27930637005D01FC /* PromoCodesViewController.swift */; };
 		81F5F94027930659005D01FC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F93F27930659005D01FC /* CartViewController.swift */; };
-		81F5F94327930A6B005D01FC /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */; };
+		81F5F94327930A6B005D01FC /* UserDefaults+AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F94227930A6B005D01FC /* UserDefaults+AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		497321A9270A212B00E5E381 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		5041A8B3955B00B556C1434D /* Pods-PizzaHouseiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.release.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.release.xcconfig"; sourceTree = "<group>"; };
 		7436DCFC7EA171876AFA8CD9 /* Pods-PizzaHouseiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.debug.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8105F1FA279C165F001621DF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		8105F1FC279C344B001621DF /* ImagePagingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePagingCell.swift; sourceTree = "<group>"; };
+		8105F202279C449A001621DF /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
+		8105F204279C666E001621DF /* UIColor+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Percentage.swift"; sourceTree = "<group>"; };
 		81491B63278F30B9008993F9 /* CircleProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressButton.swift; sourceTree = "<group>"; };
 		81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -68,7 +76,7 @@
 		81F5F93B27930614005D01FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		81F5F93D27930637005D01FC /* PromoCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodesViewController.swift; sourceTree = "<group>"; };
 		81F5F93F27930659005D01FC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		81F5F94227930A6B005D01FC /* UserDefaults+AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppState.swift"; sourceTree = "<group>"; };
 		9F4EE8FE477B19ECDB97180E /* libPods-PizzaHouseiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PizzaHouseiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +178,22 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		8105F200279C4430001621DF /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8105F202279C449A001621DF /* PageMenuViewController.swift */,
+			);
+			path = PageMenu;
+			sourceTree = "<group>";
+		};
+		8105F201279C4472001621DF /* ItemMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8105F1FC279C344B001621DF /* ImagePagingCell.swift */,
+			);
+			path = ItemMenu;
+			sourceTree = "<group>";
+		};
 		81920ED227863D44001BA6F2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +252,10 @@
 		81F5F9352793024A005D01FC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				8105F201279C4472001621DF /* ItemMenu */,
+				8105F200279C4430001621DF /* PageMenu */,
 				81F5F939279302F1005D01FC /* MenuViewController.swift */,
+				8105F1FA279C165F001621DF /* MenuViewModel.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -260,7 +287,8 @@
 		81F5F94127930A1E005D01FC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				81F5F94227930A6B005D01FC /* UserDefaults+Extensions.swift */,
+				81F5F94227930A6B005D01FC /* UserDefaults+AppState.swift */,
+				8105F204279C666E001621DF /* UIColor+Percentage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -391,17 +419,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8105F203279C449A001621DF /* PageMenuViewController.swift in Sources */,
 				4973219D270A204500E5E381 /* IB-Scenes+Generated.swift in Sources */,
 				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
 				81F5F93E27930637005D01FC /* PromoCodesViewController.swift in Sources */,
 				81F5F9322792F07B005D01FC /* MainTabBarController.swift in Sources */,
-				81F5F94327930A6B005D01FC /* UserDefaults+Extensions.swift in Sources */,
+				81F5F94327930A6B005D01FC /* UserDefaults+AppState.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
 				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
 				81E036A027949E0000968E4F /* CategoryModel.swift in Sources */,
 				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
+				8105F1FD279C344B001621DF /* ImagePagingCell.swift in Sources */,
+				8105F205279C666E001621DF /* UIColor+Percentage.swift in Sources */,
 				81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */,
 				81F5F934279300D1005D01FC /* TabBarItem.swift in Sources */,
+				8105F1FB279C165F001621DF /* MenuViewModel.swift in Sources */,
 				81E861592790B8EC00655041 /* OnboardingViewModel.swift in Sources */,
 				4973219F270A204500E5E381 /* Fonts+Generated.swift in Sources */,
 				4973217B270A1E9D00E5E381 /* SceneDelegate.swift in Sources */,
