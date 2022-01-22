@@ -1,5 +1,5 @@
 //
-//  ImagePagingCell.swift
+//  MenuCategoryPagingCell.swift
 //  PizzaHouseiOS
 //
 //  Created by Andrew Firsenko on 22.01.2022.
@@ -10,14 +10,13 @@ import SnapKit
 import Parchment
 
 private enum Constants {
-    static let titleFont: UIFont = FontFamily.Montserrat.semiBold.font(size: 10)
+    static let titleFont: UIFont = FontFamily.Montserrat.semiBold.font(size: 11)
     static let cornerRadius: CGFloat = 4
     static let topMargin: CGFloat = 6
     static let compactMargin: CGFloat = 4
-    static let backgroundOrange: UIColor = Asset.orange.color.withAlphaComponent(0.2)
 }
 
-class ImagePagingCell: PagingCell {
+class MenuCategoryPagingCell: PagingCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -57,7 +56,7 @@ class ImagePagingCell: PagingCell {
         titleLabel.text = item.title
 
         if selected {
-            contentView.backgroundColor = Constants.backgroundOrange
+            contentView.backgroundColor = Asset.orangeSecond.color
         } else {
             contentView.backgroundColor = .white
         }
@@ -66,7 +65,7 @@ class ImagePagingCell: PagingCell {
     open override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         if let attributes = layoutAttributes as? PagingCellLayoutAttributes {
             contentView.backgroundColor = .transitionColor(fromColor: .white,
-                                               toColor: Constants.backgroundOrange,
+                                               toColor: Asset.orangeSecond.color,
                                                progress: attributes.progress)
         }
     }

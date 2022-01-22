@@ -20,6 +20,7 @@ Onboarding.Delivery.SecondText = "Совершайте заказ онлайн �
 // MARK: - Menu
 
 Menu.Menu = "Меню";
+Menu.CartButton = "В корзину";
 
 // MARK: - Profile
 

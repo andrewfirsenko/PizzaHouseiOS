@@ -103,7 +103,7 @@ final class MenuViewController: BaseViewController {
     }
     
     private func configurePagingController() {
-        pagingViewController.register(ImagePagingCell.self, for: CategoryModel.self)
+        pagingViewController.register(MenuCategoryPagingCell.self, for: CategoryModel.self)
         pagingViewController.dataSource = self
         
         let menuItemSize = Constants.menuItemSize(frame: view.frame)

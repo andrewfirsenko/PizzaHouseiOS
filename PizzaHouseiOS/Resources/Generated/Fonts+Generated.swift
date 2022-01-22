@@ -23,8 +23,10 @@ internal enum FontFamily {
     internal static let all: [FontConvertible] = [semiBold]
   }
   internal enum Montserrat {
+    internal static let medium = FontConvertible(name: "Montserrat-Medium", family: "Montserrat", path: "Montserrat-Medium.ttf")
+    internal static let regular = FontConvertible(name: "Montserrat-Regular", family: "Montserrat", path: "Montserrat-Regular.ttf")
     internal static let semiBold = FontConvertible(name: "Montserrat-SemiBold", family: "Montserrat", path: "Montserrat-SemiBold.ttf")
-    internal static let all: [FontConvertible] = [semiBold]
+    internal static let all: [FontConvertible] = [medium, regular, semiBold]
   }
   internal static let allCustomFonts: [FontConvertible] = [JosefinSans.all, Montserrat.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {

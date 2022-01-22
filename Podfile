@@ -11,7 +11,8 @@ target 'PizzaHouseiOS' do
   pod 'SnapKit', '5.0.1'
   
   # UI
-  pod 'Parchment', '3.1.0'
+  pod 'Parchment', '2.4.0'
+  pod 'Kingfisher', '7.1.2'
 
 end
 
