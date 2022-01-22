@@ -18,13 +18,13 @@ private enum Constants {
     static let visibleItems: CGFloat = 4.7
     static let menuInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
     static let menuItemSpacing: CGFloat = 6
-    
     static func menuItemSize(frame: CGRect) -> CGSize {
         var width: CGFloat = frame.width - Constants.menuInsets.left
         width -= CGFloat(Int(Constants.visibleItems)) * Constants.menuItemSpacing
         width /= Constants.visibleItems
         return CGSize(width: width, height: width * 0.8)
     }
+    static let titleFont: UIFont = FontFamily.Montserrat.semiBold.font(size: 14)
 }
 
 final class MenuViewController: BaseViewController {
@@ -33,6 +33,8 @@ final class MenuViewController: BaseViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = L10n.Menu.menu
+        label.font = Constants.titleFont
+        label.textColor = Asset.mainBlack.color
         return label
     }()
     private lazy var headerView: UIView = {
