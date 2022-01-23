@@ -47,6 +47,7 @@ final class PageMenuViewController: BaseViewController {
         tableView.estimatedRowHeight = 150
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        tableView.delaysContentTouches = false
         tableView.showsVerticalScrollIndicator = false
     }
 }

@@ -122,7 +122,7 @@ final class MenuItemCell: UITableViewCell {
     // MARK: - Private
     
     private func addViews() {
-        addSubview(mainStackView)
+        contentView.addSubview(mainStackView)
         mainStackView.addArrangedSubview(productImageView)
         mainStackView.addArrangedSubview(descriptionContainer)
         
