@@ -35,7 +35,8 @@ final class PageMenuViewController: BaseViewController {
     
     private func configureLayout() {
         tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview().inset(6)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
