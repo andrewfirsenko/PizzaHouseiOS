@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class PromoCodesViewController: UIViewController {
+final class PromoCodesViewController: BaseViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent

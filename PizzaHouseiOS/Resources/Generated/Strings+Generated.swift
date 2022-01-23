@@ -19,6 +19,8 @@ internal enum L10n {
   }
 
   internal enum Menu {
+    /// В корзину
+    internal static let cartButton = L10n.tr("Localizable", "Menu.CartButton")
     /// Меню
     internal static let menu = L10n.tr("Localizable", "Menu.Menu")
   }

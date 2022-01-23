@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class CartViewController: UIViewController {
+final class CartViewController: BaseViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent

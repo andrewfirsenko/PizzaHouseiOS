@@ -1,20 +1,28 @@
 PODS:
+  - Kingfisher (7.1.2)
+  - Parchment (2.4.0)
   - SnapKit (5.0.1)
-  - SwiftGen (6.4.0)
+  - SwiftGen (6.5.1)
 
 DEPENDENCIES:
+  - Kingfisher (= 7.1.2)
+  - Parchment (= 2.4.0)
   - SnapKit (= 5.0.1)
   - SwiftGen
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+    - Parchment
     - SnapKit
     - SwiftGen
 
 SPEC CHECKSUMS:
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Parchment: 002785473861582385db5c6725165353c500198e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
 
-PODFILE CHECKSUM: 03907618bf250863286e97f008bb0ace19735f37
+PODFILE CHECKSUM: cbcb868fbcaec3c2f69e46cdc3e033600adaa9fb
 
 COCOAPODS: 1.11.2

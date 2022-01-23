@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class ProfileViewController: UIViewController {
+final class ProfileViewController: BaseViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent

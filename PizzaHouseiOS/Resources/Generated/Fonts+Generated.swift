@@ -1,7 +1,7 @@
 // swiftlint:disable all
 // Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
-#if os(OSX)
+#if os(macOS)
   import AppKit.NSFont
 #elseif os(iOS) || os(tvOS) || os(watchOS)
   import UIKit.UIFont
@@ -23,8 +23,10 @@ internal enum FontFamily {
     internal static let all: [FontConvertible] = [semiBold]
   }
   internal enum Montserrat {
+    internal static let medium = FontConvertible(name: "Montserrat-Medium", family: "Montserrat", path: "Montserrat-Medium.ttf")
+    internal static let regular = FontConvertible(name: "Montserrat-Regular", family: "Montserrat", path: "Montserrat-Regular.ttf")
     internal static let semiBold = FontConvertible(name: "Montserrat-SemiBold", family: "Montserrat", path: "Montserrat-SemiBold.ttf")
-    internal static let all: [FontConvertible] = [semiBold]
+    internal static let all: [FontConvertible] = [medium, regular, semiBold]
   }
   internal static let allCustomFonts: [FontConvertible] = [JosefinSans.all, Montserrat.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
@@ -40,7 +42,7 @@ internal struct FontConvertible {
   internal let family: String
   internal let path: String
 
-  #if os(OSX)
+  #if os(macOS)
   internal typealias Font = NSFont
   #elseif os(iOS) || os(tvOS) || os(watchOS)
   internal typealias Font = UIFont
@@ -71,7 +73,7 @@ internal extension FontConvertible.Font {
     if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
       font.register()
     }
-    #elseif os(OSX)
+    #elseif os(macOS)
     if let url = font.url, CTFontManagerGetScopeForURL(url as CFURL) == .none {
       font.register()
     }
