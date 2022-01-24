@@ -26,6 +26,9 @@
 		8105F209279C83B4001621DF /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F208279C83B4001621DF /* MenuItemModel.swift */; };
 		8105F20B279CA347001621DF /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8105F20A279CA347001621DF /* Montserrat-Medium.ttf */; };
 		8105F20D279CAB8E001621DF /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8105F20C279CAB8E001621DF /* Montserrat-Regular.ttf */; };
+		8105F20F279CEB1B001621DF /* PromoCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F20E279CEB1B001621DF /* PromoCodeModel.swift */; };
+		8105F212279CEF58001621DF /* PromoCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F211279CEF58001621DF /* PromoCodeCell.swift */; };
+		8105F214279D0334001621DF /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8105F213279D0334001621DF /* Montserrat-Bold.ttf */; };
 		81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81491B63278F30B9008993F9 /* CircleProgressButton.swift */; };
 		81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */; };
 		81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */; };
@@ -68,6 +71,9 @@
 		8105F208279C83B4001621DF /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		8105F20A279CA347001621DF /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8105F20C279CAB8E001621DF /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		8105F20E279CEB1B001621DF /* PromoCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeModel.swift; sourceTree = "<group>"; };
+		8105F211279CEF58001621DF /* PromoCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeCell.swift; sourceTree = "<group>"; };
+		8105F213279D0334001621DF /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		81491B63278F30B9008993F9 /* CircleProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressButton.swift; sourceTree = "<group>"; };
 		81C5776F2791D76F00044389 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 		81920ED227863D44001BA6F2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8105F213279D0334001621DF /* Montserrat-Bold.ttf */,
 				8105F20C279CAB8E001621DF /* Montserrat-Regular.ttf */,
 				81C577712791D7AE00044389 /* Montserrat-SemiBold.ttf */,
 				8105F20A279CA347001621DF /* Montserrat-Medium.ttf */,
@@ -219,6 +226,7 @@
 			children = (
 				81E0369F27949E0000968E4F /* CategoryModel.swift */,
 				8105F208279C83B4001621DF /* MenuItemModel.swift */,
+				8105F20E279CEB1B001621DF /* PromoCodeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				81F5F93D27930637005D01FC /* PromoCodesViewController.swift */,
+				8105F211279CEF58001621DF /* PromoCodeCell.swift */,
 			);
 			path = PromoCodes;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 				497321A5270A20F900E5E381 /* Localizable.strings in Resources */,
 				8105F20D279CAB8E001621DF /* Montserrat-Regular.ttf in Resources */,
 				49732182270A1E9E00E5E381 /* Assets.xcassets in Resources */,
+				8105F214279D0334001621DF /* Montserrat-Bold.ttf in Resources */,
 				81C577702791D76F00044389 /* JosefinSans-SemiBold.ttf in Resources */,
 				8105F20B279CA347001621DF /* Montserrat-Medium.ttf in Resources */,
 				81C577722791D7AE00044389 /* Montserrat-SemiBold.ttf in Resources */,
@@ -442,10 +452,12 @@
 				81F5F94327930A6B005D01FC /* UserDefaults+AppState.swift in Sources */,
 				8105F207279C7C3E001621DF /* MenuItemCell.swift in Sources */,
 				49732179270A1E9D00E5E381 /* AppDelegate.swift in Sources */,
+				8105F20F279CEB1B001621DF /* PromoCodeModel.swift in Sources */,
 				81491B64278F30B9008993F9 /* CircleProgressButton.swift in Sources */,
 				81E036A027949E0000968E4F /* CategoryModel.swift in Sources */,
 				81E861552790B46D00655041 /* OnboardingPageViewController.swift in Sources */,
 				8105F1FD279C344B001621DF /* MenuCategoryPagingCell.swift in Sources */,
+				8105F212279CEF58001621DF /* PromoCodeCell.swift in Sources */,
 				8105F205279C666E001621DF /* UIColor+Percentage.swift in Sources */,
 				81F5F93C27930614005D01FC /* ProfileViewController.swift in Sources */,
 				81F5F934279300D1005D01FC /* TabBarItem.swift in Sources */,

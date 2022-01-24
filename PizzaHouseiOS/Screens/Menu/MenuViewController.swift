@@ -59,6 +59,7 @@ final class MenuViewController: BaseViewController {
         addViews()
         configureLayout()
         configurePagingController()
+        configureAppearance()
     }
     
     required init?(coder: NSCoder) {
@@ -87,15 +88,12 @@ final class MenuViewController: BaseViewController {
     }
     
     private func configureLayout() {
-        headerView.snp.removeConstraints()
-        pagingViewController.view.snp.removeConstraints()
-        
-        headerView.snp.makeConstraints {
+        headerView.snp.remakeConstraints {
             $0.height.equalTo(Constants.heightHeaderView)
             $0.top.equalToSuperview().inset(view.safeAreaInsets)
             $0.leading.trailing.equalToSuperview()
         }
-        pagingViewController.view.snp.makeConstraints {
+        pagingViewController.view.snp.remakeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(headerView.snp.bottom)
             $0.bottom.equalToSuperview().inset(view.safeAreaInsets)
@@ -111,11 +109,16 @@ final class MenuViewController: BaseViewController {
                                                    height: menuItemSize.height)
         pagingViewController.menuItemSpacing = Constants.menuItemSpacing
         pagingViewController.menuInsets = Constants.menuInsets
+        pagingViewController.menuBackgroundColor = Asset.mainBackground.color
         
         pagingViewController.indicatorOptions = .hidden
         pagingViewController.borderOptions = .hidden
         
         pagingViewController.select(pagingItem: viewModel.categories.first!)
+    }
+    
+    private func configureAppearance() {
+        view.backgroundColor = Asset.mainBackground.color
     }
 }
 

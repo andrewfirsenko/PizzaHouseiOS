@@ -20,7 +20,7 @@ final class PageMenuViewController: BaseViewController {
         
         addViews()
         configureLayout()
-        configureAppearance()
+        configureTableView()
     }
     
     required public init?(coder: NSCoder) {
@@ -40,7 +40,7 @@ final class PageMenuViewController: BaseViewController {
         }
     }
     
-    private func configureAppearance() {
+    private func configureTableView() {
         tableView.register(MenuItemCell.self, forCellReuseIdentifier: MenuItemCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
@@ -63,8 +63,9 @@ extension PageMenuViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemCell.identifier,
-                                                     for: indexPath) as? MenuItemCell
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: MenuItemCell.identifier,
+                for: indexPath) as? MenuItemCell
         else {
             return UITableViewCell()
         }

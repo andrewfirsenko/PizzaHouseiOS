@@ -58,16 +58,24 @@ class MenuCategoryPagingCell: PagingCell {
         if selected {
             contentView.backgroundColor = Asset.orangeSecond.color
         } else {
-            contentView.backgroundColor = .white
+            contentView.backgroundColor = Asset.mainBackground.color
         }
     }
 
     open override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         if let attributes = layoutAttributes as? PagingCellLayoutAttributes {
-            contentView.backgroundColor = .transitionColor(fromColor: .white,
-                                               toColor: Asset.orangeSecond.color,
-                                               progress: attributes.progress)
+            contentView.backgroundColor =
+                .transitionColor(fromColor: Asset.mainBackground.color,
+                                 toColor: Asset.orangeSecond.color,
+                                 progress: attributes.progress)
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        imageView.image = nil
+        titleLabel.text = nil
     }
     
     // MARK: - Private

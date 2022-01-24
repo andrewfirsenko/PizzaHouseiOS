@@ -13,6 +13,7 @@ target 'PizzaHouseiOS' do
   # UI
   pod 'Parchment', '2.4.0'
   pod 'Kingfisher', '7.1.2'
+  pod 'Toast-Swift', '5.0.1'
 
 end
 

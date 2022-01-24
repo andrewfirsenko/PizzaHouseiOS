@@ -29,6 +29,9 @@ Profile.Profile = "Профиль";
 // MARK: - PromoCodes
 
 PromoCodes.PromoCodes = "Акции";
+PromoCodes.PromoCode = "Промокод:";
+PromoCodes.PromoCodeSaved = "Промокод скопирован";
+PromoCodes.Copy = "Скопировать";
 
 // MARK: - Cart
 
