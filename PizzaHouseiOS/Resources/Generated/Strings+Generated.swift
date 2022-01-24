@@ -52,8 +52,14 @@ internal enum L10n {
   }
 
   internal enum PromoCodes {
+    /// Скопировать
+    internal static let copy = L10n.tr("Localizable", "PromoCodes.Copy")
+    /// Промокод:
+    internal static let promoCode = L10n.tr("Localizable", "PromoCodes.PromoCode")
     /// Акции
     internal static let promoCodes = L10n.tr("Localizable", "PromoCodes.PromoCodes")
+    /// Промокод скопирован
+    internal static let promoCodeSaved = L10n.tr("Localizable", "PromoCodes.PromoCodeSaved")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

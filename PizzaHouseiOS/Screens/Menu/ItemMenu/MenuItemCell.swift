@@ -82,7 +82,6 @@ final class MenuItemCell: UITableViewCell {
         button.titleLabel?.font = Constants.cartButtonFond
         button.setTitle(L10n.Menu.cartButton, for: .normal)
         button.setTitleColor(Asset.orange.color, for: .normal)
-        button.setTitleColor(.black, for: .selected)
         button.setImage(Asset.iconCart.image, for: .normal)
         button.tintColor = Asset.orange.color
         button.semanticContentAttribute = .forceRightToLeft
@@ -92,7 +91,6 @@ final class MenuItemCell: UITableViewCell {
     }()
     
     // Public
-    
     public static var identifier: String {
         String(describing: self)
     }
@@ -112,6 +110,16 @@ final class MenuItemCell: UITableViewCell {
     }
     
     // MARK: - Lifecycle
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        productImageView.image = nil
+        nameLabel.text = nil
+        descriptionLabel.text = nil
+        quantityLabel.text = nil
+        amountButton.setTitle(nil, for: .normal)
+    }
     
     // MARK: - Actions
     

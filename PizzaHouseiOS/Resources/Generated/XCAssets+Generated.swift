@@ -37,6 +37,7 @@ internal enum Asset {
   internal static let orangeBlack = ColorAsset(name: "OrangeBlack")
   internal static let orangeSecond = ColorAsset(name: "OrangeSecond")
   internal static let pizzaDefault = ImageAsset(name: "PizzaDefault")
+  internal static let promoDebug = ImageAsset(name: "PromoDebug")
   internal static let sous = ImageAsset(name: "Sous")
   internal static let startDelivery = ImageAsset(name: "StartDelivery")
   internal static let startMobileApp = ImageAsset(name: "StartMobileApp")
