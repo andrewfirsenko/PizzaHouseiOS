@@ -34,7 +34,7 @@ final class PromoCodesViewController: BaseViewController {
         }
         return view
     }()
-    private lazy var tableView = UITableView()
+    internal lazy var tableView = UITableView()
     
     // MARK: - Init
     
@@ -57,6 +57,12 @@ final class PromoCodesViewController: BaseViewController {
         super.viewDidAppear(animated)
 
         configureLayout()
+        
+        // TODO: Нужно удалить
+        showSkeleton()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [weak self] in
+            self?.hideSkeleton()
+        }
     }
 
     
@@ -86,6 +92,7 @@ final class PromoCodesViewController: BaseViewController {
     
     private func configureTableView() {
         tableView.register(PromoCodeCell.self, forCellReuseIdentifier: PromoCodeCell.identifier)
+        tableView.register(PromoCodeSkeletonCell.self, forCellReuseIdentifier: PromoCodeSkeletonCell.identifier)
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 250
