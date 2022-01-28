@@ -60,11 +60,10 @@ final class PromoCodesViewController: BaseViewController {
         
         // TODO: Нужно удалить
         showSkeleton()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
             self?.hideSkeleton()
         }
     }
-
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent

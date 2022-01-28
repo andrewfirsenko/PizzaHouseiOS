@@ -22,6 +22,7 @@
 		499132DC27A06CFD00EC7CFA /* PromoCodeSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499132DB27A06CFD00EC7CFA /* PromoCodeSkeletonCell.swift */; };
 		499132DE27A0703000EC7CFA /* BaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499132DD27A0703000EC7CFA /* BaseConstants.swift */; };
 		499132E027A079A100EC7CFA /* CABasicAnimation+Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499132DF27A079A100EC7CFA /* CABasicAnimation+Skeleton.swift */; };
+		499132E327A080D800EC7CFA /* MenuSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499132E227A080D800EC7CFA /* MenuSkeletonView.swift */; };
 		8105F1FB279C165F001621DF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F1FA279C165F001621DF /* MenuViewModel.swift */; };
 		8105F1FD279C344B001621DF /* MenuCategoryPagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F1FC279C344B001621DF /* MenuCategoryPagingCell.swift */; };
 		8105F203279C449A001621DF /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105F202279C449A001621DF /* PageMenuViewController.swift */; };
@@ -69,6 +70,7 @@
 		499132DB27A06CFD00EC7CFA /* PromoCodeSkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeSkeletonCell.swift; sourceTree = "<group>"; };
 		499132DD27A0703000EC7CFA /* BaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstants.swift; sourceTree = "<group>"; };
 		499132DF27A079A100EC7CFA /* CABasicAnimation+Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Skeleton.swift"; sourceTree = "<group>"; };
+		499132E227A080D800EC7CFA /* MenuSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSkeletonView.swift; sourceTree = "<group>"; };
 		5041A8B3955B00B556C1434D /* Pods-PizzaHouseiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.release.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.release.xcconfig"; sourceTree = "<group>"; };
 		7436DCFC7EA171876AFA8CD9 /* Pods-PizzaHouseiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaHouseiOS.debug.xcconfig"; path = "Target Support Files/Pods-PizzaHouseiOS/Pods-PizzaHouseiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8105F1FA279C165F001621DF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 			path = Skeleton;
 			sourceTree = "<group>";
 		};
+		499132E127A080C600EC7CFA /* Skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				499132E227A080D800EC7CFA /* MenuSkeletonView.swift */,
+			);
+			path = Skeleton;
+			sourceTree = "<group>";
+		};
 		8105F200279C4430001621DF /* PageMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 		81F5F9352793024A005D01FC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				499132E127A080C600EC7CFA /* Skeleton */,
 				8105F201279C4472001621DF /* ItemMenu */,
 				8105F200279C4430001621DF /* PageMenu */,
 				81F5F939279302F1005D01FC /* MenuViewController.swift */,
@@ -466,6 +477,7 @@
 				8105F203279C449A001621DF /* PageMenuViewController.swift in Sources */,
 				4973219D270A204500E5E381 /* IB-Scenes+Generated.swift in Sources */,
 				81E514F1278CE81F00A2D6F3 /* BaseViewController.swift in Sources */,
+				499132E327A080D800EC7CFA /* MenuSkeletonView.swift in Sources */,
 				499132DC27A06CFD00EC7CFA /* PromoCodeSkeletonCell.swift in Sources */,
 				8105F209279C83B4001621DF /* MenuItemModel.swift in Sources */,
 				81F5F93E27930637005D01FC /* PromoCodesViewController.swift in Sources */,

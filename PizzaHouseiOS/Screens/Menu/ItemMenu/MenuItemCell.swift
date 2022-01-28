@@ -38,7 +38,7 @@ final class MenuItemCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = Constants.compactMargin
-        stackView.alignment = .center
+        stackView.alignment = .top
         return stackView
     }()
     private lazy var descriptionContainer: UIView = UIView()
@@ -65,7 +65,7 @@ final class MenuItemCell: UITableViewCell {
         let label = UILabel()
         label.font = Constants.descriptionLabelFond
         label.textColor = Asset.mainBlack.color
-        label.numberOfLines = 0
+        label.numberOfLines = 1
         return label
     }()
     private lazy var amountButton: UIButton = {
@@ -152,7 +152,7 @@ final class MenuItemCell: UITableViewCell {
         
         nameLabel.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().inset(CGFloat.smallMargin)
         }
         descriptionLabel.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
@@ -178,6 +178,41 @@ final class MenuItemCell: UITableViewCell {
     
     private func configureAppearance() {
         backgroundColor = .clear
+        configureSkeletonAppearance()
+    }
+    
+    private func configureSkeletonAppearance() {
+        isSkeletonable = true
+        contentView.isSkeletonable = true
+        mainStackView.isSkeletonable = true
+        descriptionContainer.isSkeletonable = true
+        
+        productImageView.isSkeletonable = true
+        productImageView.skeletonCornerRadius = Float(CGFloat.tinyRadius)
+        
+        nameLabel.isSkeletonable = true
+        nameLabel.linesCornerRadius = Int(CGFloat.smallRadius)
+        nameLabel.skeletonTextNumberOfLines = 1
+        nameLabel.skeletonTextLineHeight = .relativeToFont
+        
+        descriptionLabel.isSkeletonable = true
+        descriptionLabel.linesCornerRadius = Int(CGFloat.smallRadius)
+        descriptionLabel.skeletonTextNumberOfLines = 3
+        descriptionLabel.skeletonLineSpacing = 5
+        descriptionLabel.skeletonTextLineHeight = .relativeToFont
+        descriptionLabel.lastLineFillPercent = 30
+        descriptionLabel.skeletonPaddingInsets = UIEdgeInsets(top: 20, left: 0, bottom: -8, right: 0)
+        
+        quantityLabel.isSkeletonable = true
+        quantityLabel.isHiddenWhenSkeletonIsActive = true
+        
+        amountButton.isSkeletonable = true
+        amountButton.skeletonCornerRadius = Float( Constants.buttonHeight / 2)
+        
+        cartButton.isSkeletonable = true
+        cartButton.isHiddenWhenSkeletonIsActive = true
+        
+        layoutIfNeeded()
     }
 }
 

@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+private extension CGFloat {
+    static let tableTopInsets: CGFloat = 6
+}
+
 final class PageMenuViewController: BaseViewController {
     
     // UI
@@ -35,7 +39,7 @@ final class PageMenuViewController: BaseViewController {
     
     private func configureLayout() {
         tableView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(6)
+            $0.top.equalToSuperview().inset(CGFloat.tableTopInsets)
             $0.leading.trailing.bottom.equalToSuperview()
         }
     }
