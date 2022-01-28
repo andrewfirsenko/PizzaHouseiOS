@@ -47,6 +47,7 @@ final class MenuViewController: BaseViewController {
         return view
     }()
     private lazy var pagingViewController = PagingViewController()
+    private lazy var skeletonView = MenuSkeletonView()
     
     // Private property
     private let viewModel = MenuViewModel()
@@ -68,10 +69,22 @@ final class MenuViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pagingViewController.select(pagingItem: viewModel.categories.first!)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         configureLayout()
+        
+        // TODO: Нужно удалить
+        showSkeleton()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+            self?.hideSkeleton()
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -85,6 +98,8 @@ final class MenuViewController: BaseViewController {
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
+        
+        view.addSubview(skeletonView)
     }
     
     private func configureLayout() {
@@ -94,6 +109,11 @@ final class MenuViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview()
         }
         pagingViewController.view.snp.remakeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(headerView.snp.bottom)
+            $0.bottom.equalToSuperview().inset(view.safeAreaInsets)
+        }
+        skeletonView.snp.remakeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(headerView.snp.bottom)
             $0.bottom.equalToSuperview().inset(view.safeAreaInsets)
@@ -113,12 +133,25 @@ final class MenuViewController: BaseViewController {
         
         pagingViewController.indicatorOptions = .hidden
         pagingViewController.borderOptions = .hidden
-        
-        pagingViewController.select(pagingItem: viewModel.categories.first!)
     }
     
     private func configureAppearance() {
         view.backgroundColor = Asset.mainBackground.color
+        skeletonView.isHidden = true
+    }
+    
+    // MARK: Skeleton
+    
+    func showSkeleton() {
+        pagingViewController.view.isHidden = true
+        skeletonView.isHidden = false
+        skeletonView.showSkeleton()
+    }
+    
+    func hideSkeleton() {
+        pagingViewController.view.isHidden = false
+        skeletonView.isHidden = true
+        skeletonView.hideSkeleton()
     }
 }
 

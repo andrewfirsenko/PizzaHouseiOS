@@ -11,8 +11,8 @@ import SnapKit
 private enum Constants {
     static let lineWidth: CGFloat = 2
     static let spacing: CGFloat = 4
-    static let startPoint: CGFloat = -Double.pi / 2
-    static let endPoint: CGFloat = 3 * Double.pi / 2
+    static let startPoint: CGFloat = CGFloat(-Double.pi / 2)
+    static let endPoint: CGFloat = CGFloat(3 * Double.pi / 2)
     
     static let durationAnimation: CFTimeInterval = 0.3
 }

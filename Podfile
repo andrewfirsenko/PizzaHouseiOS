@@ -10,10 +10,14 @@ target 'PizzaHouseiOS' do
   pod 'SwiftGen'
   pod 'SnapKit', '5.0.1'
   
+  # Log
+  pod 'CSwiftLog', '1.0.2'
+  
   # UI
   pod 'Parchment', '2.4.0'
   pod 'Kingfisher', '7.1.2'
   pod 'Toast-Swift', '5.0.1'
+  pod 'SkeletonView'
 
 end
 

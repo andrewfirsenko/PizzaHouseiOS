@@ -18,12 +18,12 @@ private enum Constants {
 
 class MenuCategoryPagingCell: PagingCell {
     
+    private lazy var skeletonView = UIView()
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = Constants.titleFont
@@ -33,6 +33,11 @@ class MenuCategoryPagingCell: PagingCell {
         return label
     }()
 
+    // Public
+    public static var identifier: String {
+        String(describing: self)
+    }
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -81,6 +86,7 @@ class MenuCategoryPagingCell: PagingCell {
     // MARK: - Private
     
     private func addViews() {
+        contentView.addSubview(skeletonView)
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
     }
@@ -95,10 +101,24 @@ class MenuCategoryPagingCell: PagingCell {
             $0.top.equalTo(imageView.snp.bottom).offset(Constants.compactMargin)
             $0.bottom.equalToSuperview().inset(Constants.compactMargin)
         }
+        skeletonView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     private func configureAppearance() {
         contentView.layer.cornerRadius = Constants.cornerRadius
         contentView.clipsToBounds = true
+        
+        configureSkeletonAppearance()
+    }
+    
+    private func configureSkeletonAppearance() {
+        isSkeletonable = true
+        contentView.isSkeletonable = true
+        skeletonView.isSkeletonable = true
+        skeletonView.skeletonCornerRadius = Float(Constants.cornerRadius)
+        
+        layoutIfNeeded()
     }
 }
